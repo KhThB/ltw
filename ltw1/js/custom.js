@@ -319,3 +319,47 @@ $(function () {
 
 
 });
+
+// Hàm tính toán tổng tiền khi thay đổi số lượng hoặc xóa sản phẩm
+function updateTotal() {
+    let total = 0;
+    const rows = document.querySelectorAll('tbody tr');
+    
+    rows.forEach(row => {
+        // Lấy giá trị sản phẩm từ lớp 'price' (loại bỏ " VND")
+        const priceText = row.querySelector('.price').textContent.replace(' VND', '').replace(',', '');
+        const price = parseFloat(priceText);
+
+        // Lấy số lượng sản phẩm
+        const quantity = parseInt(row.querySelector('.quantity-input').value);
+
+        // Tính tổng tiền cho sản phẩm đó
+        const totalPrice = price * quantity;
+
+        // Cập nhật giá tổng của sản phẩm
+        row.querySelector('.total-price').textContent = totalPrice.toLocaleString() + ' VND';
+
+        // Cộng dồn vào tổng tiền của giỏ hàng
+        total += totalPrice;
+    });
+
+    // Cập nhật tổng tiền giỏ hàng
+    document.querySelector('.cart-summary p').textContent = 'Tổng Tiền: ' + total.toLocaleString() + ' VND';
+}
+
+// Xử lý sự kiện thay đổi số lượng
+document.querySelectorAll('.quantity-input').forEach(input => {
+    input.addEventListener('change', updateTotal);
+});
+
+// Xử lý sự kiện xóa sản phẩm
+document.querySelectorAll('.btn-danger').forEach(button => {
+    button.addEventListener('click', function () {
+        const row = button.closest('tr');
+        row.remove();
+        updateTotal(); // Cập nhật lại tổng tiền sau khi xóa sản phẩm
+    });
+});
+
+// Cập nhật tổng tiền khi trang được tải
+window.addEventListener('load', updateTotal);

@@ -2262,7 +2262,11 @@ textarea#comment.update_mail::placeholder {
         .product-detail a:hover {
             background-color: #45a049;
         }
-        .pagination-item{
+        /* pagination */
+        .pagination{
+            align-self:center;
+        }
+ .pagination-item{
             margin:0 8px 0;
            
         }
@@ -2289,6 +2293,8 @@ textarea#comment.update_mail::placeholder {
         .layout_padding_pagination{
             margin-top: 48px;
             margin-bottom: 32px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .category-item__link{
             display:block;
@@ -2315,3 +2321,16 @@ textarea#comment.update_mail::placeholder {
             margin-top: 50px;
             margin-bottom: 50px;
         }
+.cart-icon{
+    font-size: 2.4rem;
+    color:white;
+    margin-top: 6px;
+    text-align: left;
+}
+.product-info{
+    margin: 20px;
+    text-align: center;
+}
+.product-detail{
+    align-self: center;
+}
