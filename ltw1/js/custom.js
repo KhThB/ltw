@@ -320,46 +320,117 @@ $(function () {
 
 });
 
-// Hàm tính toán tổng tiền khi thay đổi số lượng hoặc xóa sản phẩm
-function updateTotal() {
+window.addEventListener('load', function () {
+    // Lấy giỏ hàng từ localStorage, nếu không có thì tạo mảng trống
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartTableBody = document.querySelector('tbody');
     let total = 0;
-    const rows = document.querySelectorAll('tbody tr');
-    
-    rows.forEach(row => {
-        // Lấy giá trị sản phẩm từ lớp 'price' (loại bỏ " VND")
-        const priceText = row.querySelector('.price').textContent.replace(' VND', '').replace(',', '');
-        const price = parseFloat(priceText);
 
-        // Lấy số lượng sản phẩm
-        const quantity = parseInt(row.querySelector('.quantity-input').value);
+    // Kiểm tra và chỉ hiển thị sản phẩm nếu giỏ hàng có sản phẩm
+    if (cart.length === 0) {
+        // Nếu giỏ hàng trống, không hiển thị gì trong bảng
+        cartTableBody.innerHTML = '<tr><td colspan="6">Giỏ hàng trống</td></tr>';
+    } else {
+        // Hiển thị các sản phẩm trong giỏ hàng
+        cart.forEach(product => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><img src="${product.image}" alt="${product.name}" class="cart-product-image"></td>
+                <td>${product.name}</td>
+                <td class="price">${product.price.toLocaleString()} VND</td>
+                <td>
+                    <input type="number" value="${product.quantity}" min="1" class="quantity-input">
+                </td>
+                <td class="total-price">${(product.price * product.quantity).toLocaleString()} VND</td>
+                <td><button class="btn btn-danger">Xóa</button></td>
+            `;
+            cartTableBody.appendChild(row);
+            total += product.price * product.quantity;
+        });
+    }
 
-        // Tính tổng tiền cho sản phẩm đó
-        const totalPrice = price * quantity;
-
-        // Cập nhật giá tổng của sản phẩm
-        row.querySelector('.total-price').textContent = totalPrice.toLocaleString() + ' VND';
-
-        // Cộng dồn vào tổng tiền của giỏ hàng
-        total += totalPrice;
-    });
-
-    // Cập nhật tổng tiền giỏ hàng
+    // Cập nhật tổng tiền
     document.querySelector('.cart-summary p').textContent = 'Tổng Tiền: ' + total.toLocaleString() + ' VND';
-}
 
-// Xử lý sự kiện thay đổi số lượng
-document.querySelectorAll('.quantity-input').forEach(input => {
-    input.addEventListener('change', updateTotal);
-});
+    // Xử lý sự kiện thay đổi số lượng
+    document.querySelectorAll('.quantity-input').forEach(input => {
+        input.addEventListener('change', function () {
+            const row = input.closest('tr');
+            const productName = row.querySelector('td:nth-child(2)').textContent;
+            const newQuantity = parseInt(input.value);
 
-// Xử lý sự kiện xóa sản phẩm
-document.querySelectorAll('.btn-danger').forEach(button => {
-    button.addEventListener('click', function () {
-        const row = button.closest('tr');
-        row.remove();
-        updateTotal(); // Cập nhật lại tổng tiền sau khi xóa sản phẩm
+            // Cập nhật giỏ hàng trong Local Storage
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            const product = cart.find(p => p.name === productName);
+            if (product) {
+                product.quantity = newQuantity;
+            }
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateTotal(); // Cập nhật lại tổng tiền
+        });
     });
-});
 
-// Cập nhật tổng tiền khi trang được tải
-window.addEventListener('load', updateTotal);
+    // Xử lý sự kiện xóa sản phẩm
+    document.querySelectorAll('.btn-danger').forEach(button => {
+        button.addEventListener('click', function () {
+            const row = button.closest('tr'); // Xác định hàng chứa sản phẩm
+            const productName = row.querySelector('td:nth-child(2)').textContent;
+
+            // Xóa sản phẩm khỏi giỏ hàng trong Local Storage
+            let cart = JSON.parse(localStorage.getItem('cart'));
+            cart = cart.filter(product => product.name !== productName);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            row.remove(); // Xóa hàng khỏi bảng
+            updateTotal(); // Cập nhật lại tổng tiền
+
+            // Nếu giỏ hàng rỗng, xóa nó khỏi localStorage
+            if (cart.length === 0) {
+                localStorage.removeItem('cart');
+                // Hiển thị thông báo giỏ hàng trống
+                cartTableBody.innerHTML = '<tr><td colspan="6">Giỏ hàng trống</td></tr>';
+            }
+        });
+    });
+
+    // Hàm cập nhật tổng tiền và lưu giỏ hàng vào Local Storage
+    function updateTotal() {
+        let total = 0; // Tổng tiền giỏ hàng
+        const rows = document.querySelectorAll('tbody tr'); // Lấy tất cả hàng sản phẩm trong bảng
+        const cart = []; // Mảng lưu trữ sản phẩm cho Local Storage
+
+        rows.forEach(row => {
+            // Lấy giá trị giá tiền từ cột "Giá" (bỏ chữ " VND" và dấu phẩy)
+            const priceText = row.querySelector('.price').textContent.replace(' VND', '').replace(/,/g, '');
+            const price = parseFloat(priceText);
+
+            // Lấy giá trị số lượng từ input
+            const quantityInput = row.querySelector('.quantity-input');
+            const quantity = parseInt(quantityInput.value);
+
+            // Tính tổng tiền cho sản phẩm
+            const totalPrice = price * quantity;
+
+            // Cập nhật cột "Tổng" của sản phẩm
+            row.querySelector('.total-price').textContent = totalPrice.toLocaleString() + ' VND';
+
+            // Cộng vào tổng tiền của giỏ hàng
+            total += totalPrice;
+
+            // Thêm sản phẩm vào mảng giỏ hàng
+            const item = {
+                image: row.querySelector('img').src,
+                name: row.querySelector('td:nth-child(2)').textContent,
+                price: price,
+                quantity: quantity,
+            };
+            cart.push(item);
+        });
+
+        // Cập nhật tổng tiền hiển thị
+        document.querySelector('.cart-summary p').textContent = 'Tổng Tiền: ' + total.toLocaleString() + ' VND';
+
+        // Lưu lại giỏ hàng vào Local Storage
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+});
