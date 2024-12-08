@@ -1099,4 +1099,56 @@ textarea#comment.update_mail::placeholder {
         .product-detail a:hover {
             background-color: #45a049;
         }
-
+        .pagination-item{
+            margin:0 8px 0;
+           
+        }
+        .pagination-item--active .pagination-item__link{
+            color:white;
+            background-color:#ff6347 ;
+        }
+        .pagination-item__link{
+            display:block;
+            --heigth:30px
+            text-decoration:none;
+            font-size:1.2rem;
+            font-weight: 300;
+            color:#939393;
+            min-width:40px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        
+        }
+        .pagination-item__icon{
+        
+        }
+        .layout_padding_pagination{
+            margin-top: 48px;
+            margin-bottom: 32px;
+        }
+        .category-item__link{
+            display:block;
+            --heigth:30px
+            text-decoration:none;
+            font-size:3rem;
+            font-weight: 300;
+            color:#060606;
+            text-align: center;
+        }
+        .category-item--active .category-item__link{
+            color:white;
+            background-color:#ff6347 ;
+        }
+        .category-item--active a:hover{
+            color:#ff6347;
+            background-color:#000000;
+        }
+        .category-item{
+            margin:0 8px 0;
+           
+        }
+        .layout_padding_category{
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
