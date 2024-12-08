@@ -201,7 +201,7 @@ button {
 }
 
 .layout_padding {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 0px;
 }
 
@@ -314,7 +314,7 @@ button {
 .banner_taital_main {
     width: 100%;
     float: left;
-    padding-top: 80px;
+    padding-top: 0px;
 }
 
 .banner_taital {
@@ -493,7 +493,7 @@ button {
 
 .read_bt {
     width: 170px;
-    margin: 0 auto;
+    margin:0 auto;
     text-align: center;
     padding-top: 20px;
     display: flex;
@@ -1111,4 +1111,29 @@ list-style:none;
 .layout_padding_pagination{
     margin-top: 48px;
     margin-bottom: 32px;
+}
+.category-item__link{
+    display:block;
+    --heigth:30px
+    text-decoration:none;
+    font-size:3rem;
+    font-weight: 300;
+    color:#060606;
+    text-align: center;
+}
+.category-item--active .category-item__link{
+    color:white;
+    background-color:#ff6347 ;
+}
+.category-item--active a:hover{
+    color:#ff6347;
+    background-color:#000000;
+}
+.category-item{
+    margin:0 8px 0;
+   
+}
+.layout_padding_category{
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
