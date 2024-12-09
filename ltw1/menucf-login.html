@@ -41,11 +41,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
+                        <li class="nav-item active">
                             <a class="nav-link" href="index.html">TRANG CHỦ</a>
                         </li>
 
-                        <li class="nav-item  active">
+                        <li class="nav-item">
                             <a class="nav-link" href="menu.html">SẢN PHẨM</a>
                         </li>
 
@@ -53,19 +53,25 @@
                             <a class="nav-link" href="blog.html">Blog</a>
                         </li>
 
-                       
+                        <!-- Thêm mục giỏ hàng -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <i class="bx bx-cart" aria-hidden="true"></i> Giỏ Hàng 
+                            </a>
+                        </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
                             <ul>
-                                <form class="form-inline my-2 my-lg-0">
-                                    <div class="login_bt">
-                                        <ul>
-                                            <li><a href="login.html">Đăng Nhập</a></li>
-                                            <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
+                                <li>
+                                    <a href="index.html" onclick="myFunction1()">Đăng xuất</a>
+                                    <script>
+                                        function myFunction1() {
+                                            alert("Đăng xuất thành công");
+                                        }
+                                    </script>
+                                </li>
+                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </form>
@@ -84,21 +90,21 @@
                 <div class="col-lg-4">
                         <ul class="categories layout_padding_category">
                              <li class="category-item category-item--active">
-                                 <a href="menucf.html" class="category-item__link">Coffee</a>
+                                 <a href="menucf-login.html" class="category-item__link">Coffee</a>
                              </li>
                          <ul>
                       </div>
                       <div class="col-lg-4">
                          <ul class="categories layout_padding_category">
                               <li class="category-item category-item--active">
-                                  <a href="menutea.html" class="category-item__link">Tea</a>
+                                  <a href="menutea-login.html" class="category-item__link">Tea</a>
                               </li>
                           <ul>
                        </div>
                   <div class="col-lg-4">
                          <ul class="categories layout_padding_category">
                               <li class="category-item category-item--active">
-                                  <a href="menufrz.html" class="category-item__link">Freeze</a>
+                                  <a href="menufrz-login.html" class="category-item__link">Freeze</a>
                               </li>
                           <ul>
                        </div>
@@ -109,7 +115,7 @@
             <!-- Product 1 -->
             <div class="col-lg-4 col-md-6">
                 <div class="product_item">
-                    <a href="trasen.html">
+                    <a href="trasen-login.html">
                         <img src="images/phinsuada.jpg" alt="Sản phẩm 1" class="product_image">
                     </a>
                     <h3 class="product_name">Cà phê sữa đá</h3>
@@ -124,61 +130,61 @@
             <!-- Product 2 -->
             <div class="col-lg-4 col-md-6">
                 <div class="product_item">
-                    <a href="trasen.html">
+                    <a href="trasen-login.html">
                     <img src="images/phindenda.jpg" alt="Sản phẩm 2" class="product_image"></a>
                     <h3 class="product_name">Cà phê đen đá</h3>
                     <p class="product_price">25,000 VND</p>
                     <p class="product_description">Cà phê đậm vị.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="#" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
             <!-- Product 3 -->
             <div class="col-lg-4 col-md-6">
-                <div class="product_item">                    <a href="trasen.html">
+                <div class="product_item">                    <a href="trasen-login.html">
                     <img src="images/bacxiuda.jpg" alt="Sản phẩm 3" class="product_image"></a>
                     <h3 class="product_name">Bạc xỉu đá</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Nhiều sữa hơn.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="#" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
             <!-- Product 4 -->
             <div class="col-lg-4 col-md-6">
-                <div class="product_item"><a href="trasen.html">
+                <div class="product_item"><a href="trasen-login.html">
                     <img src="images/phindihn.jpg" alt="Sản phẩm 4" class="product_image"></a>
                     <h3 class="product_name">Sữa tươi cà phê hạnh nhân</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Thơm thơm lạ lạ.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
             <!-- Product 5 -->
             <div class="col-lg-4 col-md-6">
-                <div class="product_item"><a href="trasen.html">
+                <div class="product_item"><a href="trasen-login.html">
                     <img src="images/phindikemsua.jpg" alt="Sản phẩm 5" class="product_image"></a>
                     <h3 class="product_name">Sữa tươi cà phê kem sữa</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Có thêm vị mặn của kem.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
             <!-- Product 6 -->
             <div class="col-lg-4 col-md-6">
-                <div class="product_item"><a href="trasen.html">
+                <div class="product_item"><a href="trasen-login.html">
                     <img src="images/phindichoco.jpg" alt="Sản phẩm 6" class="product_image"></a>
                     <h3 class="product_name">Sũa tươi cà phê chocolate</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Đắng đắng buồi buồi.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
                 </div>
             </div>
         </div>
