@@ -2464,3 +2464,6 @@ input[type="radio"] {
     .logout-btn:hover {
         background-color: #e60000;
     }
+    .product_section{
+       padding:100px;
+    }

@@ -17,13 +17,12 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- style css -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/menu.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <!-- font css -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Scrollbar Custom CSS -->
@@ -41,19 +40,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-login.html">TRANG CHỦ</a>
+                        </li>
+
+                        <li class="nav-item  active">
+                            <a class="nav-link" href="menu-login.html">SẢN PHẨM</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="menu.html">SẢN PHẨM</a>
+                            <a class="nav-link" href="blog-login.html">Blog</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
-                        </li>
-
-                        <!-- Thêm mục giỏ hàng -->
+ <!-- Thêm mục giỏ hàng -->
                         <li class="nav-item">
                             <a class="nav-link" href="cart.html">
                                 <i class="bx bx-cart" aria-hidden="true"></i> Giỏ Hàng 
@@ -63,14 +61,7 @@
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
                             <ul>
-                                <li>
-                                    <a href="index.html" onclick="myFunction1()">Đăng xuất</a>
-                                    <script>
-                                        function myFunction1() {
-                                            alert("Đăng xuất thành công");
-                                        }
-                                    </script>
-                                </li>
+                                <li><a href="accinfo.html"><i class='bx bxs-user'></i></a></li>
                                 <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
@@ -78,14 +69,42 @@
                 </div>
             </nav>
         </div>
-    </div>
-</body>
 
+           <!-- banner section start -->
+           <div class="banner_section layout_padding">
+               <div class="container">
+                   <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                       <div class="carousel-inner">
+                           <div class="carousel-item active">
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="banner_img"><img src="images/doze1.png"></div>
+
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="banner_taital_main">
+
+                                           <h5 class="tasty_text">2019-2024</h5>
+                                           <p class="banner_text">Mang đến trải nghiệm cà phê đích thực với hương vị đặc trưng từ những hạt cà phê chất lượng cao.</p>
+                                           <p class="banner_text">Với không gian ấm cúng và phong cách hiện đại, chúng tôi là điểm đến lý tưởng cho những ai yêu thích sự thư giãn và sáng tạo. </p>
+
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+
+
+                       </div>
+
+
+                   </div>
+               </div>
+           </div>
+       </div>
 
 <!-- Product List Section -->
 <section class="product_section">
     <div class="container">
-        <h1 class="section_title">Danh Sách Sản Phẩm</h>
             <div class="row">
                 <div class="col-lg-4">
                         <ul class="categories layout_padding_category">
@@ -160,7 +179,7 @@
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Thơm thơm lạ lạ.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
@@ -172,7 +191,7 @@
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Có thêm vị mặn của kem.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
                 </div>
             </div>
 
@@ -184,7 +203,7 @@
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Đắng đắng buồi buồi.</p>
                     <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="payment.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <a href="payment.html" class="btn btn-info btn-detail">Mua ngay</a> <!-- Nút chi tiết -->
                 </div>
             </div>
         </div>
