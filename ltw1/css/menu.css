@@ -44,18 +44,4 @@
 .add_to_cart:hover {
     background-color: #218838;
 }
-/* Đảm bảo phần header nằm trên cùng */
-.header_section {
-    position: fixed;  /* Giữ phần header cố định khi cuộn trang */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;  /* Đặt z-index cao để phần header không bị chồng lên */
-}
 
-/* Đảm bảo các phần dưới navbar không bị che khuất */
-.product_section {
-    margin-top: 100px;  /* Khoảng cách đủ lớn để tránh bị che khuất bởi header */
-}
-
-/* Điều chỉnh khoảng cách cho các phần tử khác nếu cần */

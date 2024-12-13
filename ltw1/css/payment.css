@@ -1,29 +1,24 @@
-.payment-section {
-    padding: 50px 0;
-    background-color: #f5f5f5;
-  }
-  
-  .payment-section h2 {
+
+ 
+  .checkout_section {
     text-align: center;
-    margin-bottom: 30px;
+    
   }
   
   .form-group {
-    margin-bottom: 20px;
+    margin-bottom:0px;
     text-align: center;
-   
+    display:flexbox;
+    flex-direction: column;
   }
   
   .form-control {
     border-radius: 5px;
-
+    display: flex;
+    margin-bottom: 0px;
   }
  
-  .form-group {
-    display: flex;
-    flex-direction: column;
-  }
-  
+ 
   .form-row {
     display: flex;
     justify-content: space-between;

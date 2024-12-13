@@ -42,37 +42,36 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">TRANG CHỦ</a>
+                            <a class="nav-link" href="index-login.html">TRANG CHỦ</a>
                         </li>
 
                         <li class="nav-item  active">
-                            <a class="nav-link" href="menu.html">SẢN PHẨM</a>
+                            <a class="nav-link" href="menu-login.html">SẢN PHẨM</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="blog.html">Blog</a>
+                            <a class="nav-link" href="blog-login.html">Blog</a>
                         </li>
-
-                       
+                <!-- Thêm mục giỏ hàng -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="cart.html">
+                                <i class="bx bx-cart" aria-hidden="true"></i> Giỏ Hàng 
+                            </a>
+                        </li>
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
                             <ul>
-                                <form class="form-inline my-2 my-lg-0">
-                                    <div class="login_bt">
-                                        <ul>
-                                            <li><a href="login.html">Đăng Nhập</a></li>
-                                            <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </form>
+                                <li><a href="accinfo.html"><i class='bx bxs-user'></i></a></li>
+                                <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </form>
                 </div>
             </nav>
         </div>
-    <!-- banner section start -->
+
+           <!-- banner section start -->
            <div class="banner_section layout_padding">
                <div class="container">
                    <div id="banner_slider" class="carousel slide" data-ride="carousel">
@@ -104,7 +103,6 @@
            </div>
        </div>
 
-
 <!-- Product List Section -->
 <section class="product_section">
     <div class="container">
@@ -112,21 +110,21 @@
                 <div class="col-lg-4">
                         <ul class="categories layout_padding_category">
                              <li class="category-item category-item--active">
-                                 <a href="menucf.html" class="category-item__link">Coffee</a>
+                                 <a href="menucf-login.html" class="category-item__link">Coffee</a>
                              </li>
                          <ul>
                       </div>
                       <div class="col-lg-4">
                          <ul class="categories layout_padding_category">
                               <li class="category-item category-item--active">
-                                  <a href="menutea.html" class="category-item__link">Tea</a>
+                                  <a href="menutea-login.html" class="category-item__link">Tea</a>
                               </li>
                           <ul>
                        </div>
                   <div class="col-lg-4">
                          <ul class="categories layout_padding_category">
                               <li class="category-item category-item--active">
-                                  <a href="menufrz.html" class="category-item__link">Freeze</a>
+                                  <a href="menufrz-login.html" class="category-item__link">Freeze</a>
                               </li>
                           <ul>
                        </div>
@@ -141,8 +139,8 @@
                     <h3 class="product_name">Matcha đá xay</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Ngon ngon ngon ngon.</p>
-                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail go-login">Mua ngay</a> 
+                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="trasen.html" class="btn btn-info btn-detail">Mua ngay</a> 
                 </div>
             </div>
 
@@ -153,8 +151,8 @@
                     <h3 class="product_name">Chocolate đá xay</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Ngọt mà đắng.</p>
-                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail go-login">Mua ngay</a> 
+                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="trasen.html" class="btn btn-info btn-detail">Mua ngay</a> 
                 </div>
             </div>
 
@@ -165,8 +163,8 @@
                     <h3 class="product_name">Cà phê đá xay</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Cũng là cà phê, nhưng nó xay.</p>
-                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail go-login">Mua ngay</a> 
+                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="trasen.html" class="btn btn-info btn-detail">Mua ngay</a> 
                 </div>
             </div>
 
@@ -177,8 +175,8 @@
                     <h3 class="product_name">Cà phê caramel đá xay</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Cà phê kết hợp sốt caramel.</p>
-                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail go-login">Mua ngay</a> 
+                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="trasen.html" class="btn btn-info btn-detail">Mua ngay</a> 
                 </div>
             </div>
 
@@ -189,8 +187,8 @@
                     <h3 class="product_name">Cookies&Cream</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Nghe lạ lạ nhưng nó ngon.</p>
-                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail go-login">Mua ngay</a> 
+                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="trasen.html" class="btn btn-info btn-detail">Mua ngay</a> 
                 </div>
             </div>
 
