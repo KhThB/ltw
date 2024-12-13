@@ -20,10 +20,10 @@
     <link rel="stylesheet" type="text/css" href="css/menu.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
-    <!-- fevicon -->
-    <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <link rel="stylesheet"
     href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
     <!-- font css -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Scrollbar Custom CSS -->
@@ -41,11 +41,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item ">
+                        <li class="nav-item">
                             <a class="nav-link" href="index.html">TRANG CHỦ</a>
                         </li>
 
-                        <li class="nav-item active">
+                        <li class="nav-item  active">
                             <a class="nav-link" href="menu.html">SẢN PHẨM</a>
                         </li>
 
@@ -53,7 +53,7 @@
                             <a class="nav-link" href="blog.html">Blog</a>
                         </li>
 
-                        
+                       
                     </ul>
                     <form class="form-inline my-2 my-lg-0">
                         <div class="login_bt">
@@ -72,14 +72,41 @@
                 </div>
             </nav>
         </div>
-    </div>
-</body>
+    <!-- banner section start -->
+           <div class="banner_section layout_padding">
+               <div class="container">
+                   <div id="banner_slider" class="carousel slide" data-ride="carousel">
+                       <div class="carousel-inner">
+                           <div class="carousel-item active">
+                               <div class="row">
+                                   <div class="col-md-6">
+                                       <div class="banner_img"><img src="images/doze1.png"></div>
 
+                                   </div>
+                                   <div class="col-md-6">
+                                       <div class="banner_taital_main">
+
+                                           <h5 class="tasty_text">2019-2024</h5>
+                                           <p class="banner_text">Mang đến trải nghiệm cà phê đích thực với hương vị đặc trưng từ những hạt cà phê chất lượng cao.</p>
+                                           <p class="banner_text">Với không gian ấm cúng và phong cách hiện đại, chúng tôi là điểm đến lý tưởng cho những ai yêu thích sự thư giãn và sáng tạo. </p>
+
+                                       </div>
+                                   </div>
+                               </div>
+                           </div>
+
+
+                       </div>
+
+
+                   </div>
+               </div>
+           </div>
+       </div>
 
 <!-- Product List Section -->
 <section class="product_section">
     <div class="container">
-        <h1 class="section_title">Danh Sách Sản Phẩm</h>
             <div class="row">
                 <div class="col-lg-4">
                         <ul class="categories layout_padding_category">
@@ -112,8 +139,9 @@
                     <img src="images/trathachdao.jpg" alt="Trà Thạch Đào" class="product_image">
                     <h3 class="product_name">Trà Thạch Đào</h3>
                     <p class="product_price">50,000 VND</p>
-                    <p class="product_description">Hương vị đậm, ngọt ngào, dễ đắm say.</p>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <p class="product_description">Hương vị đậm, ngọt ngào.</p>
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
 
@@ -124,7 +152,8 @@
                     <h3 class="product_name">Trà Sen Vàng</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Mùi thơm nhẹ nhàng, dễ chịu.</p>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
 
@@ -135,7 +164,8 @@
                     <h3 class="product_name">Trà Thạch Vải</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Trà thì thơm, vải thì ngon.</p>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
 
@@ -146,7 +176,8 @@
                     <h3 class="product_name">Trà Xanh Đậu Đỏ</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Đúng là trà xanh khó cưỡng thật...</p>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
 
@@ -157,8 +188,8 @@
                     <h3 class="product_name">Trà Thanh Đào</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Trà đào vị sả mang lại sự thanh khiết.</p>
-                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
 
@@ -169,8 +200,8 @@
                     <h3 class="product_name">Trà Lài Hạt Sen</h3>
                     <p class="product_price">50,000 VND</p>
                     <p class="product_description">Hạt sen thơm ngon, trà lài thơm ngọt.</p>
-                    <button class="add-to-cart btn btn-primary">Thêm vào giỏ hàng</button>
-                    <a href="trasen.html" class="btn btn-info btn-detail">Chi tiết</a> <!-- Nút chi tiết -->
+                    <button class="go-login btn btn-primary">Thêm vào giỏ hàng</button>
+                    <a href="#" class="btn btn-info btn-detail go-login">Mua ngay</a>
                 </div>
             </div>
         </div>

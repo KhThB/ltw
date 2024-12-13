@@ -42,3 +42,17 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
         alert(`Đã thêm "${productName}" vào giỏ hàng!`);
     });
 });
+// Xử lý nút Thêm vào giỏ hàng
+document.querySelectorAll('.go-login').forEach(button => {
+    button.addEventListener('click', function () {
+         // Tìm phần tử cha chứa thông tin sản phẩm
+         const productElement = this.closest('.product_item');
+
+         // Kiểm tra xem sản phẩm có tồn tại không
+         if (!productElement) {
+             console.error('Không tìm thấy sản phẩm chứa nút này!');
+             return;
+         }
+        alert(`Bạn cần đăng nhập trước.`);
+    });
+});
