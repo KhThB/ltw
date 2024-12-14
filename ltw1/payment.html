@@ -103,16 +103,48 @@
                     <textarea class="form-control" id="address" name="address" placeholder="Nhập địa chỉ" rows="3" required></textarea>
                 </div>
             </div>
+            <div class="form-group">
+                <div class="form-row">
+                  <label for="payment">Phương thức thanh toán:</label>
+                  <select class="form-control" id="payment" name="payment">
+                    <option value="cash_on_delivery">Thanh toán khi nhận hàng</option>
+                    <option value="credit_card">Thẻ tín dụng</option>
+                    <option value="bank_transfer">Chuyển khoản ngân hàng</option>
+                  </select>
+                </div>
+              </div>
+          
+              <!-- Form nhập thông tin thẻ tín dụng -->
+              <div id="credit-card-form" style="display: none; margin-top: 20px;">
+                <h4>Thông tin thẻ tín dụng</h4>
                 <div class="form-group">
-                    <div class="form-row">
-                    <label for="payment">Phương thức thanh toán:</label>
-                    <select class="form-control" id="payment" name="payment">
-                        <option value="credit_card">Thẻ tín dụng</option>
-                        <option value="bank_transfer">Chuyển khoản ngân hàng</option>
-                        <option value="cash_on_delivery">Thanh toán khi nhận hàng</option>
-                    </select>
+                  <label for="card-number">Số thẻ:</label>
+                  <input type="text" class="form-control" id="card-number" name="card-number" placeholder="1234 5678 9012 3456">
                 </div>
+                <div class="form-group">
+                  <label for="card-holder">Tên chủ thẻ:</label>
+                  <input type="text" class="form-control" id="card-holder" name="card-holder" placeholder="Nguyễn Văn A">
                 </div>
+                <div class="form-group">
+                  <label for="expiry-date">Ngày hết hạn:</label>
+                  <input type="month" class="form-control" id="expiry-date" name="expiry-date">
+                </div>
+                <div class="form-group">
+                  <label for="cvv">CVV:</label>
+                  <input type="text" class="form-control" id="cvv" name="cvv" placeholder="123">
+                </div>
+              </div>
+          
+              <!-- Thông tin chuyển khoản ngân hàng -->
+              <div id="bank-transfer-form" style="display: none; margin-top: 20px;">
+                <h4>Thông tin chuyển khoản ngân hàng</h4>
+                <p><strong>Tên ngân hàng:</strong> Ngân hàng VCB</p>
+                <p><strong>Số tài khoản:</strong>1035188895</p>
+                <p><strong>Tên chủ tài khoản:</strong> Doze Coffe</p>
+                <h5>Quét mã QR để thanh toán:</h5>
+                <img src="images/maqr.jpg" alt="QR Code" style="width: 200px; height: 200px;">
+              </div>
+            </div>
                 <button type="submit" class="btn btn-primary btn-block">Xác Nhận Thanh Toán</button>
             </form>
         </div>
@@ -125,9 +157,8 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/jquery-3.0.0.min.js"></script>
     <script src="js/plugin.js"></script>
-    <script src="js/data.js"></script>
     <!-- sidebar -->
     <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
