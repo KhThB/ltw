@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Danh sách nhân viên | Quản trị Admin</title>
+  <title>POS</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,26 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+  <style>
+    .app-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.app-nav li {
+  list-style: none;
+}
+
+.app-nav .home {
+  margin-right: auto;  /* Đẩy nút 'Trang chủ' về phía bên trái */
+}
+
+.app-nav__item {
+  text-decoration: none;
+}
+
+  </style>
 </head>
 
 
@@ -26,15 +45,17 @@
   <header class="app-header">
     <!-- Sidebar toggle button-->
     <!-- Navbar Right Menu-->
-    <ul class="app-nav">
-
-
-      <!-- User Menu-->
-      <li><a class="app-nav__item" href="/index.html"><i class='bx bx-log-out bx-rotate-180'></i> </a>
-
-      </li>
-    </ul>
-  </header>
+    
+      <ul class="app-nav">
+        <li><a href="index.html"><button class="btn btn-primary btn-sm home" type="button" title="Trang chủ" onclick="myFunction(this)">
+          <i class="fas fa-home"></i> Trang chủ
+        </button></a></li>
+        
+        <!-- User Menu-->
+        <li><a class="app-nav__item" href="/adminltw/index.html"><i class='bx bx-log-out bx-rotate-180'></i> </a></li>
+      </ul>
+    </header>
+    
   <!-- Sidebar menu-->
  
   <main class="app app-ban-hang">
@@ -58,187 +79,119 @@
           <table class="table table-hover table-bordered">
             <thead>
               <tr>
-               
+                <th class="so--luong"></th>
                 <th class="so--luong">Mã hàng</th>
                 <th class="so--luong">Tên sản phẩm</th>
-                <th class="so--luong">Ảnh</th>
+                
                 <th class="so--luong" width="10">Số lượng</th>
+                <th class="so--luong">Ảnh</th>
                 <th class="so--luong">Giá bán</th>
-                <th class="so--luong text-center" style="text-align: center; vertical-align: middle;"></th>
+                <th class="so--luong text-center" style="text-align: center; vertical-align:bottom;">Chức năng</th>
               </tr>
             </thead>
             <tbody>
-              
               <tr>
                 <td width="10"><input type="checkbox" name="check1" value="1"></td>
                 <td>001</td>
                 <td>Trà sen vàng</td>
-                <td><img src="/img-sanpham/sp1.jpeg" alt="" width="100px;"></td>
-                
-                
+                <td><input type="number" value="1" min="0"></td>
+                <td><img src="img-sanpham/sp1.jpeg" alt="" width="100px;"></td>
                 <td>50.000 đ</td>
-                
-                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                        onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-                    </button>
-                    
-                   
+                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                    <i class="fas fa-trash-alt"></i></button>
                 </td>
             </tr>
-    
+            <tr>
+                <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                <td>002</td>
+                <td>Chocolate đá xay</td>
+                <td><input type="number" value="1" min="0"></td>
+                <td><img src="img-sanpham/sp2.jpeg" alt="" width="100px;"></td>
+                <td>50.000 đ</td>
+                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                    <i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+              <td width="10"><input type="checkbox" name="check1" value="1"></td>
+              <td>003</td>
+              <td>Bạc xỉu đá</td>
+              <td><input type="number" value="0" min="0"></td>
+              <td><img src="img-sanpham/trathanhdao.jpg" alt="" width="100px;"></td>
+              <td>50.000 đ</td>
+              <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                  <i class="fas fa-trash-alt"></i></button>
+              </td>
+          </tr>
+            <tr>
+                <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                <td>004</td>
+                <td>Cà phê sữa đá</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td><img src="img-sanpham/sp3.jpeg" alt="" width="100px;"></td>
+                <td>50.000 đ</td>
+                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                    <i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                <td>005</td>
+                <td>Trà thạch đào</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td><img src="img-sanpham/sp4.jpg" alt="" width="100px;"></td>
+                <td>50.000 đ</td>
+                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                    <i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+                <td width="10"><input type="checkbox" name="check1" value="1"></td>
+                <td>006</td>
+                <td>Cà phê đen đá</td>
+                <td><input type="number" value="0" min="0"></td>
+                <td><img src="img-sanpham/phindenda.jpg" alt="" width="100px;"></td>
+                <td>50.000 đ</td>
+                <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                    <i class="fas fa-trash-alt"></i></button>
+                </td>
+            </tr>
+            <tr>
+              <td width="10"><input type="checkbox" name="check1" value="1"></td>
+              <td>007</td>
+              <td>Trà thanh đào</td>
+              <td><input type="number" value="0" min="0"></td>
+              <td><img src="img-sanpham/trathanhdao.jpg" alt="" width="100px;"></td>
+              <td>50.000 đ</td>
+              <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                  <i class="fas fa-trash-alt"></i></button>
+              </td>
+          </tr>     
           <tr>
             <td width="10"><input type="checkbox" name="check1" value="1"></td>
-            <td>002</td>
-            <td>Socola đá xay</td>
-            <td><img src="/img-sanpham/sp2.jpeg" alt="" width="100px;"></td>
-           
-            
+            <td>008</td>
+            <td>Matcha đá xay</td>
+            <td><input type="number" value="0" min="0"></td>
+            <td><img src="img-sanpham/frztraxanh.jpg" alt="" width="100px;"></td>
             <td>50.000 đ</td>
-            
-            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                    onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-                </button>
-              
-               
+            <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+                <i class="fas fa-trash-alt"></i></button>
             </td>
         </tr>
         <tr>
           <td width="10"><input type="checkbox" name="check1" value="1"></td>
-          <td>003</td>
-          <td>Cà phê sữa</td>
-          <td><img src="/img-sanpham/sp3.jpeg" alt="" width="100px;"></td>
-          
-          
+          <td>009</td>
+          <td>Cà phê đá xay</td>
+          <td><input type="number" value="0" min="0"></td>
+          <td><img src="img-sanpham/frzclassic.jpg" alt="" width="100px;"></td>
           <td>50.000 đ</td>
-          
-          <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                  onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-              </button>
-           
-             
+          <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa" onclick="myFunction(this)">
+              <i class="fas fa-trash-alt"></i></button>
           </td>
       </tr>
-      <tr>
-        <td width="10"><input type="checkbox" name="check1" value="1"></td>
-        <td>004</td>
-        <td>Trà thạch đào</td>
-        <td><img src="/img-sanpham/sp4.jpg" alt="" width="100px;"></td>
-        
-        
-        <td>50.000 đ</td>
-        
-        <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-                onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-            </button>
-          
+            
            
-        </td>
-    </tr>
-    <tr>
-      <td width="10"><input type="checkbox" name="check1" value="1"></td>
-      <td>00</td>
-      <td>Đen đá</td>
-      <td><img src="/img-sanpham/phindenda.jpg" alt="" width="100px;"></td>
-      
-      
-      <td>50.000 đ</td>
-      
-      <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-              onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-          </button>
-         
-         
-      </td>
-  </tr>
-  <tr>
-    <td width="10"><input type="checkbox" name="check1" value="1"></td>
-    <td>00</td>
-    <td>Phindichoco</td>
-    <td><img src="/img-sanpham/phindichoco.jpg" alt="" width="100px;"></td>
-    
-    
-    <td>50.000 đ</td>
-    
-    <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-            onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-        </button>
-        
-       
-    </td>
-</tr> <tr>
-  <td width="10"><input type="checkbox" name="check1" value="1"></td>
-  <td>00</td>
-  <td>Phindihn</td>
-  <td><img src="/img-sanpham/phindihn.jpg" alt="" width="100px;"></td>
-  
-  
-  <td>50.000 đ</td>
-  
-  <td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-          onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-      </button>
- 
-     
-  </td>
-</tr> <tr>
-<td width="10"><input type="checkbox" name="check1" value="1"></td>
-<td>00</td>
-<td>Phindikemsua</td>
-<td><img src="/img-sanpham/phindikemsua.jpg" alt="" width="100px;"></td>
-
-
-<td>50.000 đ</td>
-
-<td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-        onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-    </button>
-    
-   
-</td>
-</tr> <tr>
-<td width="10"><input type="checkbox" name="check1" value="1"></td>
-<td>00</td>
-<td>Trà thạch vải</td>
-<td><img src="/img-sanpham/trathachvai.jpg" alt="" width="100px;"></td>
-
-<td>50.000 đ</td>
-
-<td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-      onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-  </button>
- 
-</td>
-</tr> <tr>
-<td width="10"><input type="checkbox" name="check1" value="1"></td>
-<td>00</td>
-<td>Trà thạch đào</td>
-<td><img src="/img-sanpham/trathanhdao.jpg" alt="" width="100px;"></td>
-
-
-<td>50.000 đ</td>
-
-<td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-    onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-</button>
-
-</td>
-</tr>
-<tr>
-<td width="10"><input type="checkbox" name="check1" value="1"></td>
-<td>00</td>
-<td>Trà thạch dâu đỏ</td>
-<td><img src="/img-sanpham/traxanhdaudo.jpg" alt="" width="100px;"></td>
-
-
-<td>50.000 đ</td>
-
-<td><button class="btn btn-primary btn-sm trash" type="button" title="Xóa"
-  onclick="myFunction(this)"><i class="fas fa-trash-alt"></i> 
-</button>
-
-
-</td>
-</tr>
+            
           
             </tbody>
           </table>
@@ -255,7 +208,7 @@
           <div class="row">
             <div class="form-group  col-md-10">
               <label class="control-label">Họ tên khách hàng</label>
-              <input class="form-control" type="text" placeholder="Tìm kiếm khách hàng">
+              <input class="form-control" type="text" placeholder="Gia Khánh">
             </div>
             <div class="form-group  col-md-2">
               <label style="text-align: center;" class="control-label">Tạo mới</label>
@@ -289,7 +242,7 @@
             </div>
             <div class="form-group  col-md-6">
               <label class="control-label">Tạm tính tiền hàng: </label>
-              <p class="control-all-money-tamtinh">= 0 VNĐ</p>
+              <p class="control-all-money-tamtinh">= 100000 VNĐ</p>
             </div>
             <div class="form-group  col-md-6">
               <label class="control-label">Giảm giá (F7): </label>
@@ -297,15 +250,15 @@
             </div>
             <div class="form-group  col-md-6">
               <label class="control-label">Tổng cộng thanh toán: </label>
-              <p class="control-all-money-total">= 0 VNĐ</p>
+              <p class="control-all-money-total">= 100000 VNĐ</p>
             </div>
             <div class="form-group  col-md-6">
               <label class="control-label">Khách hàng đưa tiền (F8): </label>
-              <input class="form-control" type="number" value="290000">
+              <input class="form-control" type="number" value="1000000">
             </div>
             <div class="form-group  col-md-12">
               <label class="control-label">Khách hàng còn nợ: </label>
-              <p class="control-all-money"> - 0 VNĐ</p>
+              <p class="control-all-money"> -100000 VNĐ</p>
             </div>
             <div class="tile-footer col-md-12">
               <a class="btn btn-secondary luu-va-in" href="index.html">Lưu đơn hàng</a>

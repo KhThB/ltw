@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Danh sách Khách hàng | Quản trị Admin</title>
+  <title>Quản Lí Khách Hàng</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,7 +31,7 @@
 
 
       <!-- User Menu-->
-      <li><a class="app-nav__item" href="/index.html"><i class='bx bx-log-out bx-rotate-180'></i> </a>
+      <li><a class="app-nav__item" href="/adminltw/index.html"><i class='bx bx-log-out bx-rotate-180'></i> </a>
 
       </li>
     </ul>
@@ -39,10 +39,10 @@
   <!-- Sidebar menu-->
   <div class="app-sidebar__overlay" data-toggle="sidebar"></div>
   <aside class="app-sidebar">
-    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="/images/anhngiu.jpg" width="50px"
+    <div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="images/logo.jpg" width="50px"
       alt="User Image">
     <div>
-      <p class="app-sidebar__user-name"><b>Gia Khánh</b></p>
+      <p class="app-sidebar__user-name"><b></b></p>
       <p class="app-sidebar__user-designation">Chào mừng bạn trở lại</p>
     </div>
     </div>
@@ -63,10 +63,8 @@
       <li><a class="app-menu__item" href="table-data-banned.html"><i class='app-menu__icon bx bx-run'></i><span
             class="app-menu__label">Quản lý nội bộ
           </span></a></li>
-      <li><a class="app-menu__item" href="table-data-money.html"><i class='app-menu__icon bx bx-dollar'></i><span
-            class="app-menu__label">Bảng kê lương</span></a></li>
       <li><a class="app-menu__item" href="quan-ly-bao-cao.html"><i
-            class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Báo cáo doanh thu</span></a>
+            class='app-menu__icon bx bx-pie-chart-alt-2'></i><span class="app-menu__label">Thống kê</span></a>
       </li>
       
  
@@ -106,10 +104,7 @@
                     class="fas fa-trash-alt"></i> Xóa </a>
               </div>
           
-              <div class="col-sm-2">
-                <a class="btn btn-delete btn-sm" type="button" title="Xóa tất cả" onclick="myFunction(this)"><i
-                    class="fas fa-trash-alt"></i> Xóa tất cả </a>
-              </div>
+             
             </div>
             <table class="table table-hover table-bordered js-copytextarea" cellpadding="0" cellspacing="0" border="0"
               id="sampleTable">
@@ -137,8 +132,9 @@
                   <td>Nam</td>
                   <td>0123456789</td>                
                   <td class="table-td-center"><button class="btn btn-primary btn-sm trash" type="button" title="Khóa khách hàng"
-                      onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                    </button>
+                     onclick="myFunction(this)"><i class="fas fa-lock"></i>
+                  </button>
+                  
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>                    
@@ -153,8 +149,8 @@
                   <td>Nam</td>
                   <td>0123456789</td>                
                   <td class="table-td-center"><button class="btn btn-primary btn-sm trash" type="button" title="Khóa khách hàng"
-                      onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                    </button>
+                    onclick="myFunction(this)"><i class="fas fa-lock"></i>
+                 </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>                    
@@ -169,8 +165,8 @@
                   <td>Nam</td>
                   <td>0123456789</td>                
                   <td class="table-td-center"><button class="btn btn-primary btn-sm trash" type="button" title="Khóa khách hàng"
-                      onclick="myFunction(this)"><i class="fas fa-trash-alt"></i>
-                    </button>
+                    onclick="myFunction(this)"><i class="fas fa-lock"></i>
+                 </button>
                     <button class="btn btn-primary btn-sm edit" type="button" title="Sửa" id="show-emp"
                       data-toggle="modal" data-target="#ModalUP"><i class="fas fa-edit"></i>
                     </button>                    
@@ -226,7 +222,7 @@
            
           </div>
           <BR>
-          <a href="#" style="    float: right;
+          <a href="chinhsuanangcaokhachhang.html" style="    float: right;
         font-weight: 600;
         color: #ea0000;">Chỉnh sửa nâng cao</a>
           <BR>
@@ -274,7 +270,7 @@
         })
           .then((willDelete) => {
             if (willDelete) {
-              swal("Đã khóa thành công.!", {
+              swal("Đã xóa thành công.!", {
                 
               });
             }
